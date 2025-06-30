@@ -1,8 +1,8 @@
-# 👕 GAN Comparison on Clothing Dataset
+# GAN Comparison on Clothing Dataset
 
 This project implements and compares multiple Generative Adversarial Networks (GANs) on a clothing image dataset. The goal is to explore the strengths and weaknesses of each architecture using both qualitative outputs and quantitative metrics like FID, KID, and Inception Score.
 
-## 🧠 Models Implemented
+## Models Implemented
 
 - **DCGAN**  
   A baseline GAN with ConvTranspose2d layers and batch normalization.
@@ -19,7 +19,7 @@ This project implements and compares multiple Generative Adversarial Networks (G
 - **Lite StyleGAN**  
   A simplified StyleGAN with Adaptive Instance Normalization (AdaIN) to inject style information into intermediate layers.
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 - **FID (Fréchet Inception Distance)**  
   Measures similarity between real and generated image distributions.
@@ -30,25 +30,20 @@ This project implements and compares multiple Generative Adversarial Networks (G
 - **Inception Score (IS)**  
   Measures image quality and diversity using a pre-trained classifier.
 
-## 📁 Dataset
+## Dataset
 
 - Dataset: Clothing images, preprocessed to **64×64** resolution.
 - Real samples stored in: `real_clothing/real/`
 - Each GAN saves generated samples in: `generated_<model_name>/`
 
-## 🚀 How to Run
+## How to Run
 
-1. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Train a model**
+ **Train a model**
    ```python
    train_dcgan(generator, discriminator, ...)
    ```
 
-3. **Evaluate**
+ **Evaluate**
    ```python
    report_all_fids()
    report_all_inception_scores()
@@ -65,13 +60,13 @@ This project implements and compares multiple Generative Adversarial Networks (G
 | VAE-GAN   | 269.29  | 0.2924    | 1.06 ± 0.00        |
 | StyleGAN  | 300.15  | 0.2864    | 1.07 ± 0.00        |
 
-## 📝 Notes
+## Notes
 
 - InfoGAN and VAE-GAN require more care during training due to additional losses.
 - StyleGAN uses AdaIN layers for style modulation, improving flexibility.
 - FID and KID scores computed on 1,000 samples from each model.
 - Inception Scores remain low due to dataset complexity and size.
 
-## 📎 License
+## License
 
 MIT License
